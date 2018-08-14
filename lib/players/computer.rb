@@ -105,7 +105,7 @@ module Players
      elsif random_corners.find {|corner| (board.cells[corner] == " ") && (self.opposite_corner(corner) == self.token)}
        corner_index = random_corners.find {|corner| (board.cells[corner] == " ") && (self.opposite_corner(corner) == self.token)}
      else
-       corner_index = random_corners.sample
+       random_corners.find {|corner| corner == " "}
      end
       corner_move = corner_index + 1
       corner_move
