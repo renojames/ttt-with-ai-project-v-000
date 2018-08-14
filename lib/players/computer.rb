@@ -112,7 +112,7 @@ module Players
     end
 
     def random_move
-      positions = self.game.board.cells.each_index.select{|cell| game.board.cells[cell] == 'x'}
+      positions = self.game.board.cells.each_index.select{|cell| game.board.cells[cell] == " "}
       binding.pry
       positions.sample
     end
